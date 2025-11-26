@@ -59,14 +59,14 @@ export function MissaoModal({ missao, onClose, onConcluir }) {
         <div className="resultado">
           <p>{resultado}</p>
           {status === "sucesso" && (
-            <img
+            <img className="imgModal"
               src={sucesso}
               alt="Missão concluída com sucesso"
               width="100"
             />
           )}
           {status === "erro" && (
-            <img
+            <img className="imgModal"
               src={erro}
               alt="Erro na resposta da missão"
               width="100"

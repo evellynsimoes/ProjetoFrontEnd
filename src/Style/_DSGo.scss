@@ -1,5 +1,5 @@
 .corpo {
-  background-image: url('../assets/arenaHP.jpg'); 
+  background-image: url('../assets/fundoGoToHome.jpg'); 
   background-size: cover; 
   background-repeat: no-repeat; 
   background-position: center; 
@@ -12,7 +12,6 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: #ebe1e11a;
     backdrop-filter: blur(2.5px); 
   }
 

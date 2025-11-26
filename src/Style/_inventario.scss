@@ -1,8 +1,8 @@
 @use './variaveis' as *;
+
 .inventario {
   padding: 2rem;
   text-align: center;
-  color: #fff;
   min-height: 100vh;
 
   h2 {
@@ -10,9 +10,8 @@
     font-size: 2rem;
   }
 
-  .vazio {
-    font-size: 1.2rem;
-    color: #ccc;
+  .imgInventario{
+    width: 10rem;
   }
 
   /* Grid responsivo para exibir as figurinhas */
@@ -22,37 +21,43 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-items: center;
     margin-top: 15px;
-  }
 
-  .figurinha {
-    background: $card;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 0 8px rgba(0,0,0,0.4);
-    transition: transform 0.2s;
-    width: 100%;
-    max-width: 150px;
-    color:$fundo;
 
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    img {
+    .figurinha {
+      background: $card;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s;
       width: 100%;
-      max-width: 100px;
-      margin-bottom: 0.5rem;
+      max-width: 150px;
+      color: $fundo;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .figurinha img.imgInventario {
+        width: 5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1rem;
+      }
     }
 
-    p {
-      margin: 0;
-      font-weight: bold;
-      font-size: 1rem;
-    }
   }
+
+
 }
 
-/* 🔹 Responsividade */
 @media (max-width: 768px) {
   .inventario {
     padding: 1rem;
@@ -79,10 +84,6 @@
 
     .figurinha {
       max-width: 100px;
-
-      img {
-        max-width: 80px;
-      }
 
       p {
         font-size: 0.9rem;

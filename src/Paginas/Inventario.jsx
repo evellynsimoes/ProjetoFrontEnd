@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "../Style/_inventario.scss"
 export function Inventario() {
   const [figurinhas, setFigurinhas] = useState([]);
 
@@ -36,8 +36,7 @@ export function Inventario() {
         <div className="grid">
           {figurinhas.map((f) => (
             <div key={f.id} className="figurinha">
-              <img src={f.imagem} alt={f.nome} />
-             
+              <img className="imgInventario" src={f.imagem} alt={f.nome} />
             </div>
           ))}
         </div>

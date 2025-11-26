@@ -9,7 +9,6 @@ export function Galeria() {
   const [fotos, setFotos] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  // 🔹 Abre o modal automaticamente quando o componente é carregado
   useEffect(() => {
     setIsOpen(true);
   }, []);
